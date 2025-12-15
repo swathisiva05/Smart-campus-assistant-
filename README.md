@@ -85,7 +85,12 @@ College students often struggle to manage scattered lecture PDFs, notes, and stu
    extended with backend AI services in the future.
 
 ---
+## 📝 Note
 
+Install the required Node.js dependencies using the following command:
+
+```bash
+npm install
 
 
 
