@@ -1,133 +1,92 @@
-# Smart Campus Assistant
+# 🎓 Smart Campus Assistant
 
-An AI-powered study companion that helps college students efficiently learn from their course materials.
+Smart Campus Assistant is a React-based AI learning assistant designed to help college students study efficiently by organizing course materials and providing intelligent features such as Question & Answer, Summarization, and Quiz generation.
 
-## Features
+---
 
-- **💬 Unified Chat Interface**: Single chat interface for all interactions - no separate buttons needed!
-- **📁 File Upload**: Drag-and-drop files directly into the chat or use the upload button
-- **💬 Q&A**: Ask natural language questions and get answers from your uploaded materials
-- **📝 Summarization**: Simply ask "summarize [filename]" or "give me a summary" to get concise summaries
-- **❓ Practice Quizzes**: Ask "create a quiz with 5 questions" or "generate practice quiz" to test your knowledge
-- **🤖 Smart Intent Detection**: The AI automatically understands what you want - summarize, quiz, or Q&A
+## 📌 Project Overview
 
-## Tech Stack
+College students often struggle to manage scattered lecture PDFs, notes, and study resources. The Smart Campus Assistant provides a centralized platform where students can upload their materials and interact with them through an intuitive and modular user interface.
 
-- **Frontend**: React 18 with Vite
-- **UI**: Custom CSS with modern design
-- **Icons**: Lucide React
-- **HTTP Client**: Axios
+---
 
-## Getting Started
+## 🎯 Objectives
 
-### Prerequisites
+- Centralize student study materials
+- Enable natural language question answering
+- Automatically summarize long lecture notes
+- Generate quizzes for practice and revision
+- Improve learning efficiency and retention
 
-- Node.js (v16 or higher)
-- npm or yarn
+---
 
-### Installation
+## ✨ Features
 
-1. Install dependencies:
-```bash
-npm install
-```
+- 📂 **File Upload**
+  - Upload PDFs and documents using a simple interface
 
-2. Start the development server:
-```bash
-npm run dev
-```
+- 💬 **Question & Answer (QnA)**
+  - Ask questions in natural language
+  - Receive relevant answers from the content
 
-3. Open your browser and navigate to `http://localhost:3000`
+- 📝 **Summarization**
+  - Generate short summaries from long documents
 
-### Usage
+- 🧠 **Quiz Generator**
+  - Create quizzes from study material
+  - Helps in exam preparation
 
-The application features a unified chat interface. Simply:
+- 💻 **Modular React UI**
+  - Clean and reusable components
+  - Easy navigation and maintenance
 
-1. **Upload files**: Drag and drop files into the chat area or click the upload button
-2. **Ask questions**: Type any question about your materials
-3. **Request summaries**: Type "summarize [filename]" or "give me a summary"
-4. **Generate quizzes**: Type "create a quiz with 5 questions" or "generate practice quiz"
+---
 
-Examples:
-- "What are the main concepts in chapter 3?"
-- "Summarize lecture1.pdf"
-- "Create a quiz with 10 questions"
-- "Give me important questions from the uploaded materials"
+## 🛠️ Tech Stack
 
-## Project Structure
+| Layer | Technology |
+|------|------------|
+| Frontend | React (Vite) |
+| Language | JavaScript |
+| Styling | CSS |
+| Build Tool | Vite |
+| Version Control | Git |
 
-```
-smart-campus-assistant/
-├── src/
-│   ├── components/
-│   │   ├── Chat.jsx            # Unified chat interface (main component)
-│   │   ├── FileUpload.jsx      # Legacy file upload (kept for reference)
-│   │   ├── QnA.jsx             # Legacy Q&A (kept for reference)
-│   │   ├── Summary.jsx         # Legacy summary (kept for reference)
-│   │   └── Quiz.jsx            # Legacy quiz (kept for reference)
-│   ├── services/
-│   │   └── api.js              # API service layer
-│   ├── App.jsx                 # Main application component
-│   ├── App.css                 # Application styles
-│   ├── index.css               # Global styles
-│   └── main.jsx                # Application entry point
-├── index.html
-├── package.json
-└── vite.config.js
-```
+---
 
-## Backend Integration
+## ⚙️ Working of the Project
 
-The application is designed to work with a backend API. Currently, it includes mock responses when the API is unavailable. To connect to a real backend:
+1. The user opens the Smart Campus Assistant web application in the browser.
 
-1. Set the `VITE_API_BASE_URL` environment variable to your backend URL
-2. Implement the following API endpoints:
+2. The application loads the main React component (`App.jsx`), which controls navigation between different features.
 
-### Endpoints
+3. **File Upload**
+   - The user uploads study materials using `FileUpload.jsx`.
+   - Files are prepared for processing and future backend integration.
 
-- `POST /api/upload` - Upload course materials
-- `POST /api/qa` - Ask questions about materials
-- `POST /api/summarize` - Generate document summaries
-- `POST /api/quiz` - Generate practice quizzes
+4. **Question & Answer (QnA)**
+   - The user enters a question in natural language.
+   - `QnA.jsx` captures the input and processes the request.
+   - The response is displayed on the screen.
 
-### Example Backend Implementation
+5. **Summarization**
+   - The user selects content to summarize.
+   - `Summary.jsx` generates a concise summary for quick revision.
 
-You can use Python with FastAPI/Flask, Node.js with Express, or any other backend framework. The backend should:
+6. **Quiz Generation**
+   - The user chooses the quiz option.
+   - `Quiz.jsx` generates questions based on the uploaded material.
+   - The quiz is displayed interactively.
 
-1. **File Processing**: Extract text from PDFs, DOCX, and PPTX files
-2. **Vector Storage**: Store document embeddings (using Pinecone, Weaviate, or similar)
-3. **AI Integration**: 
-   - Use OpenAI GPT, Anthropic Claude, or open-source LLMs for Q&A and summarization
-   - Implement RAG (Retrieval Augmented Generation) for accurate answers
-4. **Quiz Generation**: Use AI to generate questions and answers from document content
+7. Each feature is implemented as a separate React component,
+   making the application modular and easy to maintain.
 
-## Environment Variables
+8. The project runs using the Vite development server and can be
+   extended with backend AI services in the future.
 
-Create a `.env` file in the root directory:
+---
 
-```
-VITE_API_BASE_URL=http://localhost:5000/api
-```
 
-## Building for Production
 
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-## Future Enhancements
-
-- [ ] Real-time collaboration features
-- [ ] Support for more file formats
-- [ ] Integration with Wikipedia API
-- [ ] NCERT textbook integration
-- [ ] User authentication and cloud storage
-- [ ] Mobile app version
-- [ ] Advanced analytics and progress tracking
-
-## License
-
-MIT
+## 📁 Project Structure
 
