@@ -88,5 +88,5 @@ College students often struggle to manage scattered lecture PDFs, notes, and stu
 
 
 
-## 📁 Project Structure
+
 
