@@ -40,3 +40,38 @@ Students often struggle to manage scattered PDFs, notes, and learning resources.
 | Version Control | Git |
 
 ---
+
+## ⚙️ Working of the Smart Campus Assistant
+
+1. The user opens the Smart Campus Assistant web application.
+
+2. The application loads the main React component (`App.jsx`) which renders
+   different feature components such as FileUpload, QnA, Summary, and Quiz.
+
+3. **File Upload**
+   - The user uploads study materials (PDF / documents).
+   - `FileUpload.jsx` handles file selection and upload logic.
+   - Uploaded files are prepared for processing (backend/API integration ready).
+
+4. **Question & Answer (QnA)**
+   - The user enters a question in natural language.
+   - `QnA.jsx` captures the question input.
+   - The question is sent to the service layer (`services/`) for processing.
+   - The response is displayed to the user.
+
+5. **Summarization**
+   - The user selects a document or content to summarize.
+   - `Summary.jsx` processes the request.
+   - A concise summary is generated and shown on the UI.
+
+6. **Quiz Generation**
+   - The user selects the quiz option.
+   - `Quiz.jsx` generates questions based on the content.
+   - The quiz is displayed interactively for the user.
+
+7. **Styling & UI**
+   - Each component has its own CSS file for styling.
+   - The UI is clean, modular, and easy to navigate.
+
+8. The application runs locally using Vite development server
+   and can be extended with backend AI services in the future.
